@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+       <tr>
+         <th>#</th>
+         <th>Name</th>
+         <th>Email</th>
+         <th>Admin</th>
+       </tr>
+     </thead>
+     <tbody>
+       <% @users.each_with_index  do |user, i|%>
+        <tr>
+          <th scope="row"><%= i + 1 %></th>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td><%= link_to user.admin, users_path(user), method: :patch %></td>
+        </tr>
+      </tbody>
+      <% end %>
+</table>

@@ -16,11 +16,11 @@
           <h3><%= story.title %></h3>
           <small><%= time_ago_in_words(story.created_at) %> ago</small>
           <p><%= story.content.truncate(150)  %></p>
-          <p><%= link_to 'Show', story, class: "btn btn-primary" %> 
+          <p><%= link_to 'Show', story, class: "btn btn-primary" %>
             <% if user_signed_in? && story.user == current_user %>
-            <%= link_to 'Edit', edit_story_path(story), class: "btn btn-warning" %> 
-            <%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></p>
-            <% end %>
+             <%= link_to 'Edit', edit_story_path(story), class: "btn btn-warning"%>
+             <%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></p>
+             <% end %>
         </div>
       </div>
     </div>
